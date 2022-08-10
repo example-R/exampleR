@@ -1,5 +1,5 @@
 var search = {}
-search.items = ["prova"]
+search.items = ["Search"]
 search.url = "exampler?&ex="
 search.what = "example"
 search.semblants = function(){
