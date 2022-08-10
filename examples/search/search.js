@@ -1,6 +1,7 @@
 var search = {}
 search.items = ["prova"]
 search.url = "exampler?&ex="
+search.what = "example"
 search.semblants = function(){
 	var value = document.getElementById("in").value;
 	document.getElementById("semblants").innerHTML = "";
@@ -17,7 +18,7 @@ search.search = function(){
 	}
 	else{
 		search.semblants()
-		document.getElementById("error").innerHTML = "<p style='color:red'>There is no example called: '" + value + "'.</p><br><br><p>Maybe:</p>";
+		document.getElementById("error").innerHTML = "<p style='color:red'>There is no " + search.what +" called: '" + value + "'.</p><br><br><p>Maybe:</p>";
 	}
 }
 search.advance = function(event){
