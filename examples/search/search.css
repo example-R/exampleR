@@ -1,1 +1,13 @@
-
+#in{
+	height: 50px;
+	width: 200px;
+	background-color: powderblue;
+	border: none;
+	border-radius: 5px;
+	font-family: "blocco";
+	font-size: 40px;
+}
+@font-face {
+font-family: "blocco";
+src: url("https://raw.githubusercontent.com/example-R/exampleR/main/blocco.ttf");
+}
