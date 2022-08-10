@@ -1,0 +1,43 @@
+<html>
+<head>
+	<title>exampleR - Get your own example in HTML, CSS and JS - By Roger Padrell</title>
+	<link rel="stylesheet" type="text/css" href="exampler.css">
+	<script type="text/javascript" src="exampler.js"></script>
+</head>
+<body>
+	<h1 id="example-title">EXAMPLE TITLE</h1>
+	<p id="example-description">EXAMPLE DESCRIPTION</p>
+	<br><br>
+	<iframe id="example-content">EXAMPLE CONTENT</iframe>
+	<br><br>
+	<p id="example-use">EXAMPLE USE</p>
+	<br><br>
+	<div class="hover"><a class="hover-text" href="" id="example-download-link">EXAMPLE DOWNLOAD LINK</a></div>
+	<br><br>
+	<div class="hover"><a class="hover-text" href="" id="example-more-link">EXAMPLE MORE LINK</a></div>
+	<br><br>
+	<div class="hover"><a class="hover-text" href="index.html">&lt-- BACK &lt--</a></div>
+	<br><br><br>
+</body>
+<script>
+	window.onload = onloads()
+	function onloads(){
+		if(exs.includes(example)){
+			//load title
+			var jsonAt = examples[exs.indexOf(example)];
+			document.getElementById("example-title").innerHTML = jsonAt.title.replaceAll("ò","&ograve");
+			//load description
+			document.getElementById("example-description").innerHTML = jsonAt.description.replaceAll("ò","&ograve")
+			document.getElementById("example-content").setAttribute("src", jsonAt.content)
+			//load use
+			document.getElementById("example-use").innerHTML = jsonAt.use.replaceAll("ò","&ograve");
+			//load link
+			document.getElementById("example-more-link").setAttribute("href", jsonAt.link)
+			document.getElementById("example-more-link").innerHTML = "Click here for the interactive example";
+			//load download
+			document.getElementById("example-download-link").setAttribute("href", jsonAt.download)
+			document.getElementById("example-download-link").innerHTML = "Click here to download the example";
+		}
+	}
+</script>
+</html>
