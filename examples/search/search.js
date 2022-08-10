@@ -1,5 +1,6 @@
 var search = {}
 search.items = ["prova"]
+search.url = "exampler?&ex="
 search.semblants = function(){
 	var value = document.getElementById("in").value;
 	document.getElementById("semblants").innerHTML = "";
@@ -12,7 +13,7 @@ search.semblants = function(){
 search.search = function(){
 	var value = document.getElementById("in").value;
 	if(search.items.indexOf(value) >= 0){
-		document.getElementById("error").innerHTML = "<br><div class='hover'><a class='hover-text' href='exampler?&ex=" + value + "'>Go to:" + value + "</a></div>'"
+		document.getElementById("error").innerHTML = "<br><div class='hover'><a class='hover-text' href='" + search.url + value + "'>Go to:" + value + "</a></div>'"
 	}
 	else{
 		search.semblants()

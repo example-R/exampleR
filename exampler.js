@@ -1,3 +1,3 @@
 var example = new URLSearchParams(location.search).get("ex");
 var exs = ["prova"]
-var examples = [{"title":"prova","description":"Aixó és una prova","content":"file:///Users/roger/Documents/CODI/HTML/exampler/index","use":"Prova-ho!","link":"file:///Users/roger/Documents/CODI/HTML/exampler/index.html#link","download":"file:///Users/roger/Documents/CODI/HTML/exampler/index.html#download"}]
+var examples = [{"title":"Search","description":"That component is for a basic search engine.","content":"/emaples/search/search.html","use":"You have to change the 'search.items' variable","link":"file:///Users/roger/Documents/CODI/HTML/exampler/index.html#link","download":"file:///Users/roger/Documents/CODI/HTML/exampler/index.html#download"}]
