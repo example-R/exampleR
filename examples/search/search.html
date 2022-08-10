@@ -16,8 +16,17 @@
 		sessionStorage.setItem("arr","['bar','tar','go']")
 		sessionStorage.setItem("bgc","whiteghost")
 		sessionStorage.setItem("inc","powderblue")
-		sessionStorage.setItem("")
+		sessionStorage.setItem("f","blocco")
 	}
-	else
+	else{
+		sessionStorage.setItem("arr",new URLSearchParams(location.search).get("arr"))
+		sessionStorage.setItem("bgc",new URLSearchParams(location.search).get("bgc"))
+		sessionStorage.setItem("inc",new URLSearchParams(location.search).get("inc"))
+		sessionStorage.setItem("f",new URLSearchParams(location.search).get("f"))
+	}
+	search.items = JSON.parse(sessionStorage.arr)
+	document.getElementById("body").style.backgroundColor = sessionStorage.bgc;
+	document.getElementById("in").style.backgroundColor = sessionStorage.inc;
+	document.getElementById("body").style.fontFamily = sessionStorage.f;
 </script>
 </html>

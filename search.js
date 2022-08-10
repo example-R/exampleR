@@ -1,4 +1,7 @@
 var search = {}
+search.items = ["prova"]
+search.url = "exampler?&ex="
+search.what = "example"
 search.semblants = function(){
 	var value = document.getElementById("in").value;
 	document.getElementById("semblants").innerHTML = "";
